@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title> Web Tutorials</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/1ec8e7a502.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <section class="header" style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('Images/background.jpg');">
+            <nav>
+                <a href="index.html"><img src="Images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="#course">COURSES</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" id="menuIcon" onclick="showMenu()" ></i>
+            </nav>
+            <div class="text-box">
+                <h1 style="font-size: 400%;">Web Tutorials</h1>
+                <h3><br>Design Your Digital Canvas</h3>
+                <p class="white"><br><b><i>Master the Art of Web Creation!</i></b><br>Welcome to 'Design Your Digital Canvas,' where we guide you through the intricate brushstrokes of web design and HTML/CSS coding. Join us on this creative journey, and master the art of web creation one pixel at a time!</p>
+                <p> <br> </p>
+                <a href="" class="btn">Visit Us  -> </a>
+            </div>
+        </section>
+
+
+        <!------  Course   -------->
+        <section class="course" id="course">
+            <h1>Courses We Offer</h1>
+            <p>Unlock the World of Web Development with Our HTML and CSS Tutorials!</p>
+            <div class="row">
+                <div class="course-col">
+                    <a href="HTML/1_introduction.html" style="text-decoration: none;">
+                    <h3>HTML</h3>
+                    <p>HTML, short for HyperText Markup Language, is the web's building blocks. It uses tags and elements to structure content. Our HTML courses are for all skill levels, 
+                        unlocking web development potential. Dive in now!</p>
+                    </a>
+                </div>
+                <div class="course-col">
+                    <h3>CSS</h3>
+                    <p>CSS, or Cascading Style Sheets, is the key to web design. It's what makes websites look great. With CSS, you can control layout, colors, fonts, and more. Our CSS courses are for all skill levels, helping you create amazing web designs. Join us to boost your 
+                        web development skills today!</p>
+                </div>
+            </div>
+             <p><br></p>
+        </section>
+        <hr>
+        <!-------    Footer    ------->
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>Discover the world of web development through our top-notch HTML and CSS tutorials.<br> We're here to help you unlock your potential in web design.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            
+        </section>
+        
+        
+        <script>
+            var navLinks=document.getElementById ("navLinks")
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+        
+          
+    </body>
+</html>

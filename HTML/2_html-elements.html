@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>HTML Elements</title>
+        <link rel="stylesheet" href="CSS/html.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1ec8e7a502.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+     <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">COURSES</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li><a href="../index.html" style="color:rgb(0, 153, 255); width: 10px; font-weight:800; "><img style="width: 62px;" src="../Images/logo3.png">Web Tutorials</a></li>
+            <li class="hideOnMobile"><a href="#">HOME</a></li>
+            <li class="hideOnMobile"><a href="#">COURSES</a></li>
+            <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+            <li  class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+     </nav>
+     <section class="html-elements">
+        <h1 style="padding-top: 30px; font-size: 30px;">HTML Elements</h1>
+        <p>HTML elements are the building blocks of web pages. They define the structure and content of a web page, 
+            allowing you to display text, images, links, and more. In HTML, elements are enclosed within tags, which 
+            consist of an opening tag, content, and a closing tag.</p>
+        <hr>
+        <h2>Common HTML Elements</h2>
+        <p>Here are some of the most common HTML elements you'll use in web development:</p>
+        <ul style="margin-left: 30px;">
+            <br>
+            <li><code><b>Headings (h1 - h6):</b></code></li>
+            <p>Headings are used to define the headings or titles of different sections on a web page.</p>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Heading level 1&lt;/h1&gt;
+    &lt;h2&gt;Heading level 2&lt;/h2&gt;
+    &lt;h5&gt;Heading level 5&lt;/h5&gt;
+    &lt;h6&gt;Heading level 6&lt;/h6&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><code><b>Paragraphs (p):</b></code></li>
+            <p>The <mark><code>&lt;p&gt;</code></mark> element is used to create paragraphs of text.</p>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code1">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;This is a simple paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode1()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output1"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><code><b>Links (a):</b></code></li>
+            <p>The <mark><code>&lt;a&gt;</code></mark> element is used to create hyperlinks to other web pages or resources.</p>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code2">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode2()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output2"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <li><code><b>Lists (ul, ol, li):</b></code></li>
+            <p>Lists help organize content. <mark><code>&lt;ul&gt;</code></mark> creates unordered (bulleted) lists,<mark><code>&lt;ol&gt;</code></mark> creates ordered (numbered) lists, and <mark><code>&lt;li&gt;</code></mark> defines list items.</p>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code3">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;Unodered List&lt;p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br&gt;
+    &lt;p&gt;Odered List&lt;p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode3()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output3"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <li><code><b>Images (img):</b></code></li>
+            <p>Use the <mark><code>&lt;img&gt;</code></mark> element to embed images on a web page. The <mark><code>&lt;alt&gt;</code></mark> is displayed
+             when image is not displayed due to any reason. </p> 
+                <div class="editor-container">
+                    <div class="editor-box">
+                        <label><i class="fa-brands fa-html5"></i> HTML</label>
+                        <textarea id="html-code4">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;img src="example.jpg" alt="Description of the image"&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+            
+                        </textarea>
+                        <button onclick="runCode4()">Run</button>
+                    </div>
+                    <div class="editor-box">
+                        <label><i class="fa-solid fa-play"></i> Output</label>
+                        <div class="output-container">
+                            <iframe id="output4"></iframe>
+                        </div>
+                    </div>
+                </div>
+            <hr>
+            <h2>Special Characters</h2>
+            <p>In HTML, some characters are reserved for markup purposes and cannot be used as-is.
+             To display these characters, you must use character entities or entity codes. Here are a few common specia
+             characters:</p>
+             <ul style="padding-left:30px ;">
+                <li><mark><code>&amp;lt;</code></mark> for <code>&lt;</code></li>
+                <li><mark><code>&amp;gt;</code></mark> for <code>&gt;</code></li>
+                <li><mark><code>&amp;amp;</code></mark> for <code>&amp;</code></li>
+                <li><mark><code>&amp;copy;</code></mark> for ©</li>
+             </ul>
+             <hr>
+             <h2>Empty Elements</h2>
+             <p>Some HTML elements are known as "empty elements" or "self-closing elements" because they don't have closing tags. 
+             Instead, they are closed within a single tag. Here are a few common empty elements:</p>
+             <ul>
+                <li><mark><code>&lt;img&gt;</code></mark> (Image): The <mark><code>&lt;img&gt;</code></mark> element is used to embed images on a web page. It doesn't require a closing tag.</li>
+                <pre><code>&lt;img src="image.jpg" alt="Description of the image"&gt;</code></pre>
+              
+                <li><mark><code>&lt;br&gt;</code></mark> (Line Break): The <mark><code>&lt;br&gt;</code></mark> element is used to insert a line break within text or content. It also doesn't require a closing tag.</li>
+                <pre><code>This is a line of text.&lt;br&gt;This is a new line of text.</code></pre>
+              
+                <li><mark><code>&lt;hr&gt;</code></mark> (Horizontal Rule): The <mark><code>&lt;hr&gt;</code></mark> element creates a horizontal line or thematic break on a page. Like the previous examples, it is self-closing.</li>
+                <pre><code>&lt;hr&gt;</code></pre>
+              </ul>
+              <p>Example:</p>
+              <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code5">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;img src="example.jpg" alt="Description of the image"&gt;
+    &lt;p&gt;1st line  &lt;br&gt; 2nd Line  &lt;br&gt;&lt;/p&gt;
+    &lt;p&gt;There is a Horizontal rule below this&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode5()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output5"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2>HTML Comments</h2>
+            <p>You can add comments in your HTML code to make notes or explanations. 
+            Comments are not displayed on the web page and can be useful for documentation.</p>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code6">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;!-- This is a HTML comment --&gt;
+    &lt;p&gt;Comments are not displayed on the web page&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode6()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output6"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr>
+         <h2>Using Elements Together</h2>
+        <p>HTML elements are often used together to create more complex content. For example, you can combine headings,
+         paragraphs, and links to create structured and informative web pages.</p>
+         <div class="editor-container">
+            <div class="editor-box">
+                <label><i class="fa-brands fa-html5"></i> HTML</label>
+                <textarea id="html-code7">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+&lt;p&gt;Explore our services and products.&lt;/p&gt;
+&lt;a href="products.html"&gt;Visit our products&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    
+                </textarea>
+                <button onclick="runCode7()">Run</button>
+            </div>
+            <div class="editor-box">
+                <label><i class="fa-solid fa-play"></i> Output</label>
+                <div class="output-container">
+                    <iframe id="output7"></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>By mastering these HTML elements and understanding how to use them effectively, you can create well-structured and
+        visually appealing web pages. In the next sections of this tutorial, we'll explore HTML attributes and more advanced topics
+        to enhance your HTML skills.</p>
+        <br><br>
+        <ul class="navg">
+            <a href="1_introduction.html"><li class="prev"><span></span></li></a>
+            <a href="3_html-attributes.html"><li class="next"><span></span></li></a>
+        </ul>
+        
+
+     </section>
+     <script src="Js/code.js"></script>
+     </body>
+</html>

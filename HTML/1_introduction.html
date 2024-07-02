@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>HTML Introduction</title>
+        <link rel="stylesheet" href="CSS/html.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1ec8e7a502.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+     <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">COURSES</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li><a href="../index.html" style="color:rgb(0, 153, 255); width: 10px; font-weight:800; "><img style="width: 62px;" src="../Images/logo3.png">Web Tutorials</a></li>
+            <li class="hideOnMobile"><a href="#">HOME</a></li>
+            <li class="hideOnMobile"><a href="#">COURSES</a></li>
+            <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+            <li  class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+     </nav>
+     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <section class="html-introduction">
+            <h1 style="padding-top: 30px; font-size: 30px;">HTML Introduction</h1>
+            <p>HTML, or HyperText Markup Language, is the bedrock of the web. It's a markup language that
+                 structures and presents content online, defining a web page's layout, including text, images, 
+                 links, and more.</p>
+            <hr>
+            <h2>Key Concepts</h2>
+            <ul style="margin-left: 30px;">
+                <li>HTML is a markup language used to structure and present content on the web.</li>
+                <li>Web pages are written in HTML and define the page's structure and layout.</li>
+                <li>HTML uses tags (elements) to describe various page elements like headings, paragraphs,
+                     and links.</li>
+                <li>HTML documents have a hierarchical structure with <mark>&lt;html&gt;</mark>,
+                     <mark>&lt;head&gt;</mark>, and <mark>&lt;body&gt;</mark> sections.</li>
+                <li>Elements can have attributes that provide additional information about the element.</li>
+                <li>Creating a basic HTML page involves defining elements such as <mark>&lt;html&gt;</mark>, 
+                    <mark>&lt;head&gt;</mark>,and <mark>&lt;body&gt;</mark>.</li>
+            </ul>
+            <hr>
+            <h2>Creating Your First HTML Page</h2>
+            <p>To create your first HTML page, you can use a simple text editor (like Notepad on Windows or 
+                TextEdit on macOS) or a code editor. Here's a basic HTML template:</p>
+
+
+             <!-- Live HTML editor -->
+
+        <div class="editor-container">
+            <div class="editor-box">
+                <label><i class="fa-brands fa-html5"></i> HTML</label>
+                <textarea id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;This is my first paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    
+                </textarea>
+                <button onclick="runCode()">Run</button>
+            </div>
+            <div class="editor-box">
+                <label><i class="fa-solid fa-play"></i> Output</label>
+                <div class="output-container">
+                    <iframe id="output"></iframe>
+                </div>
+            </div>
+        </div>
+            
+
+
+
+
+
+
+
+
+            <ul style="margin-left: 30px;">
+                <li><mark>&lt;!DOCTYPE html&gt;</mark> declares the document type.</li>
+                <li><mark>&lt;html&gt;</mark>is the root element.</li>
+                <li><mark>&lt;head&gt;</mark>contains metadata like the page title.</li>
+                <li><mark>&lt;body&gt;</mark>contains the visible content.</li>
+            </ul>
+            <p><br>Save this file with an ".html" extension and open it in a web browser to see your first
+             HTML page.<br>HTML is the cornerstone of web development, and understanding its basics is 
+             the first step in creating web pages and applications. As you progress through this tutorial,
+             you'll learn more about HTML elements, attributes, and how to structure web content effectively.
+             <br>Continue your HTML learning journey by exploring the various HTML elements and attributes 
+             in our tutorials. You can also practice your skills using the interactive code editors provided
+             throughout the tutorials.</p>
+            <hr>
+            <h2>HTML Page Structure</h2>
+            <p>Below is a visualization of an HTML page structure:</p>
+            <img style="width: 60%; height:550px;" 
+            src="../Images/html-document-structure-example.jpg" alt="html-document-structure-example">
+            <hr>
+            <p>Ready to dive in? Let's explore the world of HTML!</p>
+            <br><br>
+            <ul class="navg">
+                <li style="display: none;" class="prev"><span></span></li>
+                <a href="2_html-elements.html"><li class="next"><span></span></li></a>
+            </ul>
+            
+        </section>
+
+     <script>
+        function showSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+        // Function to update the output
+        function runCode() {
+                const htmlCode = document.getElementById("html-code").value;
+                const output = document.getElementById("output");
+
+                output.contentDocument.open();
+                output.contentDocument.write(htmlCode);
+                output.contentDocument.close();
+        }
+     </script>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>HTML Attributes</title>
+        <link rel="stylesheet" href="CSS/html.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1ec8e7a502.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+     <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">COURSES</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li><a href="../index.html" style="color:rgb(0, 153, 255); width: 10px; font-weight:800; "><img style="width: 62px;" src="../Images/logo3.png">Web Tutorials</a></li>
+            <li class="hideOnMobile"><a href="#">HOME</a></li>
+            <li class="hideOnMobile"><a href="#">COURSES</a></li>
+            <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+            <li  class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+     </nav>
+     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <section class="html-attributes">
+        <h1 style="padding-top:30px; font-size:30px;">HTML Attributes</h1>
+        <p>HTML attributes are essential components of HTML elements. They provide additional information about an element, allowing you to modify and customize elements to suit your needs. Attributes are always specified in the opening tag of an element
+        and are written as name-value pairs within the element's brackets.</p>
+        <hr>
+        <h2>Common HTML Attributes</h2>
+        <p>Let's explore some commonly used HTML attributes and their purposes:</p>
+        <ul style="margin-left: 30px;">
+            <br>
+            <li><b>src Attribute:</b> The <mark>src</mark> attribute is used to specify the source URL for elements like images and multimedia. It defines
+             the location of the resource that should be displayed or embedded in the element.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;img src="example.jpg" alt="Description of the image" &gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>href Attribute:</b> The <mark>href</mark> attribute is primarily used with anchor tags (<mark>&lt;a&gt;</mark>) to define the destination URL of hyperlinks.
+             It specifies where the user will be directed when they click on the link.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code1">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode1()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output1"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>alt Attribute:</b> The <mark>alt</mark> attribute is used in image elements (<mark>&lt;img&gt;</mark>) to provide alternative text for the image.
+             This text is displayed if the image cannot be loaded or when it's read by screen readers for accessibility.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code2">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;img src="image.jpg" alt="Description of the image"&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode2()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output2"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>width and height Attributes:</b> The <mark>width</mark> and <mark>height</mark> attributes are used to specify the dimensions of an image.
+             These attributes allow you to control the width and height of the displayed image.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code3">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;img src="example.jpg" width="300" height="200" alt="Image dimensions: 300x200 pixels"&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode3()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output3"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>class Attribute:</b> The <mark>class</mark> attribute is used to define one or more class names for an element.
+             It is often used for styling with CSS. You can apply styles to multiple elements sharing the same class.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code4">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;style&gt;
+            .important{
+                color:blue;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p class="important"&gt;This is an important paragraph.&lt;/p&gt;
+    &lt;p class="important"&gt;You can apply styles to multiple elements sharing the same class.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode4()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output4"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>id Attribute:</b> The <mark>id</mark> attribute provides a unique identifier for an element on a page. It is often used for scripting and
+             CSS targeting, allowing you to select and manipulate specific elements.</li>
+             <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code5">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;style&gt;
+            #header{
+                font-weight:bold;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;div id=header&gt;Header Content&lt;/div&gt;
+    &lt;p&gt;Normal font&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode5()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output5"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <li><b>title Attribute:</b> The <mark>title</mark> attribute is used to provide additional information about an element. It typically 
+            appears as a tooltip when a user hovers their mouse over the element.</li>
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label><i class="fa-brands fa-html5"></i> HTML</label>
+                    <textarea id="html-code6">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;!-- Link with a title --&gt;
+    &lt;a href="https://www.example.com" title="Visit Example Website"&gt;Visit Example&lt;/a&gt;
+    &lt;br&gt; &lt;br&gt;
+
+    &lt;!-- Image with a title --&gt;
+    &lt;img src="example.jpg" alt="Description of the image" title="Chemical Experiments"&gt;
+    
+    &lt;!-- Paragraph with a title --&gt;
+    &lt;p title="Additional information about this paragraph"&gt;This is a paragraph with a title.&lt;/p&gt;
+
+    &lt;!-- Heading with a title --&gt;
+    &lt;h2 title="Important Heading"&gt;This is a heading with a title&lt;/h2&gt;
+
+    &lt;!-- Custom element with a title --&gt;
+    &lt;div data-custom="example-value" title="Custom Element Title"&gt;This is a custom attribute with a 
+    title&lt;/div&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+        
+                    </textarea>
+                    <button onclick="runCode6()">Run</button>
+                </div>
+                <div class="editor-box">
+                    <label><i class="fa-solid fa-play"></i> Output</label>
+                    <div class="output-container">
+                        <iframe id="output6"></iframe>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <hr>
+        <h2>Custom Attributes</h2>
+        <p>Custom attributes in HTML are attributes that you create yourself to store additional data or information within your HTML
+        elements. These attributes are not part of the standard HTML specification but are often used for various purposes in web
+        development, such as JavaScript scripting and CSS styling. Custom attributes provide a way to attach metadata or user-defined
+        properties to HTML elements.</p>
+        <div class="editor-container">
+            <div class="editor-box">
+                <label><i class="fa-brands fa-html5"></i> HTML</label>
+                <textarea id="html-code7">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div data-product-id="123" data-category="electronics" data-price="499.99"&gt;
+  This element represents a product.
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    
+                </textarea>
+                <button onclick="runCode7()">Run</button>
+            </div>
+            <div class="editor-box">
+                <label><i class="fa-solid fa-play"></i> Output</label>
+                <div class="output-container">
+                    <iframe id="output7"></iframe>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>In this example, a custom attribute is used to store product information within a <mark>&lt;div&gt;</mark> element. JavaScript can 
+        be employed to access and manipulate this data, and CSS can be used to style elements based on the values of these
+        custom attributes.</p>
+        <br>
+        <p>Custom attributes are a flexible and powerful feature in web development, providing a way to extend the capabilities of HTML
+        elements and make your web pages more interactive and functional. However, it's essential to use them responsibly and in a way
+        that adheres to best practices to maintain code readability and compatibility with HTML standards.</p>
+        <hr>
+        <p>Understanding HTML attributes and how to use them effectively is essential for web development. Attributes enhance the
+        functionality and appearance of your web pages, making them more interactive and engaging.</p>
+        <br><br>
+        <ul class="navg">
+            <a href="2_html-elements.html"><li class="prev"><span></span></li></a>
+            <a href="4_html-forms.html"><li class="next"><span></span></li></a>
+        </ul>
+     
+     </section>
+     <script src="Js/code.js"></script>
+    </body>
+     </html>

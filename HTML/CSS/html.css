@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;  
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+
+}
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center ;  
+}
+nav li{
+    height: 50px;  
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+
+}
+nav a:hover{
+    background-color: #f0f0f0;  
+}
+nav li:first-child{
+    margin-right: auto;  
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:rgba(225,225,225,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow:-10px 0 -10px rgba(0,0,0,0.1) ;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width:100%
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media (max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+     display: block;   
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/*****************************************************************************************************************************/
+
+.html-introduction, .html-elements, .html-attributes,.html-forms,.html-tables{
+    padding-left:25px;
+}
+h1,h2{
+    margin-bottom: 20px;
+}
+hr{
+    background-color: whitesmoke;
+    height: 2px; 
+    border: none;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+
+}
+p,ul{
+    line-height:1.7;
+}
+mark{
+    background-color: rgba(128, 128, 128, 0.16);
+    color: crimson;
+}
+pre{
+    background-color: rgba(128, 128, 128, 0.16);
+    color: crimson;
+    display: inline-block;
+}
+
+/***************************************************************************************************************/
+/* Style the editor container */
+.editor-container {
+    display: flex;
+    text-align: center;
+}
+
+/* Style each editor box */
+.editor-box {
+    flex: 1; /* Distribute space equally between the two boxes */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%; /* Make the box 100% of the viewport width */
+    box-sizing: border-box; /* Include border and padding in the width */
+    position: relative;
+}
+
+/* Style the textarea and iframe inside the editor box */
+textarea, iframe {
+    width: 100%;
+    height:35vh;
+    border: none;
+    resize: none; /* Disable textarea resizing */
+    box-sizing: border-box; /* Include border and padding in the width/height */
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    position: absolute;
+    top: 3.1px; /* Adjust the top position to move it down approximately 1 cm */
+    right: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure the button appears above the textarea */
+}
+/***********************************************Navigation*****************************************/
+.navg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px 10px;
+    padding: 0;
+    display: flex;
+}
+.navg li{
+    list-style: none;
+    width: 55px;
+    height: 55px;
+    background: rgba(51, 164, 166, 0.253);
+    margin: 0px 10px;/*10px*/
+    border-radius: 50%;
+    transition: .5s;
+
+}
+.navg li:hover{
+    background: #0070ff;
+}
+.navg li span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    transition: .5s;
+}
+.navg li.next span{
+    top: 29%;
+    right: 11.5%;
+    transform: translate(-50%)rotate(-45deg);
+    border-left: none;
+    border-top: none;
+}
+.navg li.next:hover span{
+    right: 6%;
+}
+.navg li.next span:before{
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0px,25px)scaleX(0);
+    transition: .5s;
+}
+.navg li.next:hover span:before{
+    transform: rotate(45deg) translate(0px,25px)scaleX(1);
+}
+
+.navg li.prev span{
+    top: 29%;
+    left: 27.5%;
+    transform: translate(-50%)rotate(-45deg);
+    border-right: none;
+    border-bottom: none;
+}
+.navg li.prev:hover span{
+    left: 21.5%;
+}
+.navg li.prev span:before{
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-2px,-1px)scaleX(0);
+    transition: .5s;
+}
+.navg li.prev:hover span:before{
+    transform: rotate(45deg) translate(-2px,-1px)scaleX(1);
+}
+/**************************************************************************************************************************************************/
